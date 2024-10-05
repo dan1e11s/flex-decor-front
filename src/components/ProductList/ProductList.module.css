@@ -1,0 +1,17 @@
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.productCard {
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.productCard img {
+  max-width: 300px;
+  max-height: 300px;
+}

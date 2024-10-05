@@ -1,0 +1,48 @@
+.categoryButtonsWrapper {
+  overflow: hidden;
+  padding: 10px 0;
+  position: relative;
+}
+
+.categoryButtonsWrapper.overflow {
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.categoryButtonsWrapper.overflow::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryButtons {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-left: 10px;
+}
+
+.categoryButtons:last-child {
+  padding-right: 10px;
+}
+
+.categoryButton {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #0e8544;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.categoryButton:hover {
+  background-color: #00b250;
+}
+
+.selected {
+  background-color: #0c3a21;
+  border: 2px solid #fff;
+}

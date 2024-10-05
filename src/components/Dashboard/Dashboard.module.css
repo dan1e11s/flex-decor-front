@@ -1,0 +1,118 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.addCategory,
+.addProduct {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #a3c1b5;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+input[type='text'],
+input[type='file'] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #a3c1b5;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px;
+  background-color: #0e8544;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #00b250;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .addCategory,
+  .addProduct {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  input[type='text'],
+  input[type='file'] {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 5px;
+  }
+
+  .addCategory,
+  .addProduct {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  input[type='text'],
+  input[type='file'] {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+}
