@@ -26,6 +26,8 @@ const CategoryButtons: React.FC<CategoryButtonsProps> = ({
 
   useEffect(() => {
     const container = containerRef.current;
+    let startX = 0;
+    let scrollLeft = 0;
 
     if (container) {
       const handleWheel = (e: WheelEvent) => {
@@ -35,10 +37,26 @@ const CategoryButtons: React.FC<CategoryButtonsProps> = ({
         }
       };
 
+      const handleTouchStart = (e: TouchEvent) => {
+        startX = e.touches[0].pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+      };
+
+      const handleTouchMove = (e: TouchEvent) => {
+        e.preventDefault();
+        const x = e.touches[0].pageX - container.offsetLeft;
+        const walk = (startX - x) * 1.5; // Скорость прокрутки
+        container.scrollLeft = scrollLeft + walk;
+      };
+
       container.addEventListener('wheel', handleWheel);
+      container.addEventListener('touchstart', handleTouchStart);
+      container.addEventListener('touchmove', handleTouchMove);
 
       return () => {
         container.removeEventListener('wheel', handleWheel);
+        container.removeEventListener('touchstart', handleTouchStart);
+        container.removeEventListener('touchmove', handleTouchMove);
       };
     }
   }, []);
