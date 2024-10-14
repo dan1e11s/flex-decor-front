@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
         <img src={logo} alt="Logo" width="70px" height="70px" />
       </div>
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/+996702033371"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.contactButton}
